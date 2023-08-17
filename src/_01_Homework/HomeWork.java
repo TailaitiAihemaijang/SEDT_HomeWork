@@ -75,6 +75,18 @@ public class HomeWork extends BaseDriver {
         btn.click();
         WebElement show = driver.findElement(By.cssSelector("[id='answer']"));
         System.out.println(show.getText());
+        bekleVeKapat();
+    }
+    @Test
+    public void test5(){
+        driver.get("https://testpages.herokuapp.com/styled/index.html");
+        WebElement fakeAlerts = driver.findElement(By.cssSelector("[id='fakealerttest']"));
+        fakeAlerts.click();
+        WebElement showAlert = driver.findElement(By.cssSelector("[id='fakealert']"));
+        showAlert.click();
+        WebElement ok = driver.findElement(By.cssSelector("[id='dialog-ok']"));
+        ok.click();
+        bekleVeKapat();
     }
 
 
