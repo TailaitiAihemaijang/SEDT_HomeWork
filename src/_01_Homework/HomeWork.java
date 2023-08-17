@@ -36,5 +36,20 @@ public class HomeWork extends BaseDriver {
         bekleVeKapat();
     }
 
+    @Test
+    public void test2() {
+        driver.get("https://demo.applitools.com/");
+        WebElement userName = driver.findElement(By.cssSelector("[id='username']"));
+        userName.sendKeys("ttechno@gmail.com");
+        WebElement password = driver.findElement(By.cssSelector("[id='password']"));
+        password.sendKeys("techno123.");
+        WebElement btn = driver.findElement(By.cssSelector("[id='log-in']"));
+        btn.click();
+        WebElement text = driver.findElement(By.cssSelector("[id='time']"));
+        String a = text.getText();
+        Assert.assertTrue(a.contains("Your nearest branch closes in: 30m 5s"));
+        bekleVeKapat();
+    }
+
 
 }
