@@ -88,6 +88,20 @@ public class HomeWork extends BaseDriver {
         ok.click();
         bekleVeKapat();
     }
-
+//[id='modaldialog']
+    @Test
+    public void test6(){
+        driver.get("https://testpages.herokuapp.com/styled/index.html");
+        WebElement fakeAlerts = driver.findElement(By.cssSelector("[id='fakealerttest']"));
+        fakeAlerts.click();
+        MyFunc.Wait(2);
+        WebElement showAlert = driver.findElement(By.cssSelector("[id='modaldialog']"));
+        showAlert.click();
+        MyFunc.Wait(2);
+        WebElement ok = driver.findElement(By.cssSelector("[id='dialog-ok']"));
+        ok.click();
+        MyFunc.Wait(2);
+        bekleVeKapat();
+    }
 
 }
