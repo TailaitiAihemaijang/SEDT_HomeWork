@@ -32,4 +32,18 @@ public class XOath extends BaseDriver {
         Assert.assertTrue(!emilOut.getText().equals(null));
         bekleVeKapat();
     }
+    @Test
+    public void test2(){
+        driver.get("https://demo.applitools.com/");
+        WebElement userName = driver.findElement(By.xpath("//input[@id='username']"));
+        userName.sendKeys("ttechno@gmail.com");
+        WebElement password = driver.findElement(By.xpath("//input[@id='password']"));
+        password.sendKeys("techno123.");
+        WebElement btn = driver.findElement(By.xpath("//a[@id='log-in']"));
+        btn.click();
+        WebElement text = driver.findElement(By.xpath("//h6[@id='time']"));
+        String a = text.getText();
+        Assert.assertTrue(a.contains("Your nearest branch closes in: 30m 5s"));
+        bekleVeKapat();
+    }
 }
