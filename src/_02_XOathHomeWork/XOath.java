@@ -46,4 +46,16 @@ public class XOath extends BaseDriver {
         Assert.assertTrue(a.contains("Your nearest branch closes in: 30m 5s"));
         bekleVeKapat();
     }
+    @Test
+    public void test3(){
+        driver.get("https://www.snapdeal.com/");
+        WebElement serch = driver.findElement(By.xpath("//input[@id='inputValEnter']"));
+        serch.sendKeys("teddy bear");
+        WebElement btn = driver.findElement(By.xpath("//i[@class='sd-icon sd-icon-search-under-catagory lfloat']"));
+        btn.click();
+        WebElement txet = driver.findElement(By.xpath("//span[@class='nnn']"));
+        System.out.println(txet.getText());
+        Assert.assertTrue(txet.getText().contains("We've got 298 results for teddy bear"));
+        bekleVeKapat();
+    }
 }
