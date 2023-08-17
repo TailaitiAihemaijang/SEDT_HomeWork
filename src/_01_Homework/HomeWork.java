@@ -50,6 +50,18 @@ public class HomeWork extends BaseDriver {
         Assert.assertTrue(a.contains("Your nearest branch closes in: 30m 5s"));
         bekleVeKapat();
     }
+    @Test
+    public void test3(){
+        driver.get("https://www.snapdeal.com/");
+        WebElement serch = driver.findElement(By.cssSelector("[id='inputValEnter']"));
+        serch.sendKeys("teddy bear");
+        WebElement btn = driver.findElement(By.cssSelector("button>*:nth-child(1)>*"));
+        btn.click();
+        WebElement txet = driver.findElement(By.cssSelector("[style='color: #212121; font-weight: normal']"));
+        System.out.println(txet.getText());
+        Assert.assertTrue(txet.getText().contains("We've got 298 results for teddy bear"));
+        bekleVeKapat();
+    }
 
 
 }
