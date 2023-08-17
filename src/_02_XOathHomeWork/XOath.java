@@ -73,4 +73,17 @@ public class XOath extends BaseDriver {
         System.out.println(show.getText());
         bekleVeKapat();
     }
+    @Test
+    public void test5(){
+        driver.get("https://testpages.herokuapp.com/styled/index.html");
+        WebElement fakeAlerts = driver.findElement(By.xpath("//a[@id='fakealerttest']"));
+        fakeAlerts.click();
+        WebElement showAlert = driver.findElement(By.xpath("//input[@id='fakealert']"));
+        showAlert.click();
+        MyFunc.Wait(2);
+        WebElement ok = driver.findElement(By.xpath("//button[@id='dialog-ok']"));
+        ok.click();
+        MyFunc.Wait(2);
+        bekleVeKapat();
+    }
 }
