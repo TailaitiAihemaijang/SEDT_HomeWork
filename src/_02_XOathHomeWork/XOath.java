@@ -86,4 +86,18 @@ public class XOath extends BaseDriver {
         MyFunc.Wait(2);
         bekleVeKapat();
     }
+    @Test
+    public void test6(){
+        driver.get("https://testpages.herokuapp.com/styled/index.html");
+        WebElement fakeAlerts = driver.findElement(By.xpath("//a[@id='fakealerttest']"));
+        fakeAlerts.click();
+        MyFunc.Wait(2);
+        WebElement showAlert = driver.findElement(By.xpath("//input[@id='modaldialog']"));
+        showAlert.click();
+        MyFunc.Wait(2);
+        WebElement ok = driver.findElement(By.xpath("//button[@id='dialog-ok']"));
+        ok.click();
+        MyFunc.Wait(2);
+        bekleVeKapat();
+    }
 }
