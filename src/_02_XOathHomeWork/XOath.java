@@ -58,4 +58,19 @@ public class XOath extends BaseDriver {
         Assert.assertTrue(txet.getText().contains("We've got 298 results for teddy bear"));
         bekleVeKapat();
     }
+    @Test
+    public void test4(){
+        driver.get("https://testpages.herokuapp.com/styled/index.html");
+        WebElement culctor = driver.findElement(By.xpath("//a[@id='calculatetest']"));
+        culctor.click();
+        WebElement num1 = driver.findElement(By.xpath("//input[@id='number1']"));
+        num1.sendKeys("40");
+        WebElement num2 = driver.findElement(By.xpath("//input[@id='number2']"));
+        num2.sendKeys("23");
+        WebElement btn = driver.findElement(By.xpath("//input[@id='calculate']"));
+        btn.click();
+        WebElement show = driver.findElement(By.xpath("//span[@id='answer']"));
+        System.out.println(show.getText());
+        bekleVeKapat();
+    }
 }
