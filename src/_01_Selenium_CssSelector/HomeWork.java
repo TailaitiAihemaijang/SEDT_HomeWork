@@ -1,13 +1,10 @@
-package _01_Homework;
+package _01_Selenium_CssSelector;
 
 import Utility.BaseDriver;
 import Utility.MyFunc;
-import com.google.common.annotations.VisibleForTesting;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.junit.Test;
 
 public class HomeWork extends BaseDriver {
